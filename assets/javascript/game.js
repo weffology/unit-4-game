@@ -21,6 +21,10 @@ $(document).ready(function(){
         computerNumber = getRandomNumber(19,120);
         $("#computerNumber").text(computerNumber);
 
+        //Clear total score value
+        totalScore = 0;
+        $("#score").text(0);
+
         //Update number of wins & losses
         $("#wins").text(wins);
         $("#losses").text(losses);
@@ -49,8 +53,22 @@ $(document).ready(function(){
     //Call the reset function on page load
     reset();
 
-    $(".crystal-icon").click(function(){
-        console.log($(this).val());
-    })
+    //Create a function that will run when the crystals are clicked
+    function crystalClick () {
+        var clickNumber = $(this).val();
+        totalScore = parseInt(totalScore) + parseInt(clickNumber);
+        $("#score").text(totalScore);
+        if (totalScore === computerNumber) {
+            wins++;
+            reset();
+        }
+        else if (totalScore > computerNumber) {
+            losses++;
+            reset();
+        }
+    }
 
+    //Create an on click event listener for all the crystals
+    $(".crystal-icon").click(crystalClick);
+    
 })
