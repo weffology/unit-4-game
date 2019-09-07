@@ -14,15 +14,22 @@
     <!--ADDITIONAL STYLE-->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
+    <!--SCRIPT-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    
 </head>
 
 <body>
+    <!--HEADER-->
     <div class="jumbotron fluid-jumbotron">
         <div class="container">
             <h1 class="display-4">Crystals Collector!</h1>
             <p class="lead">Select the right combination of crystals to match the computer's chosen number!</p>
         </div>
     </div>
+    
+    <!--RULES TO THE GAME-->
     <div class="container">
         <div class="row">
             <div class="col-lg">
@@ -34,13 +41,17 @@
             </div>
         </div>
     </div>
+    
+    <!--HORIZONTAL RULE-->
     <div class="container">
         <hr>
     </div>
+    
+    <!--GAME AREA-->
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p><strong>Computer's Number: <span></span></strong></p>
+                <h4><strong>Computer's Number: <span id="computerNumber"></span></strong></h4>
             </div>
             <div class="col-md-6">
                 <p></p>
