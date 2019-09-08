@@ -32,22 +32,18 @@ $(document).ready(function(){
         //Generate and push out a fresh value for crystal #1
         crystalValue1 = getRandomNumber(1,12);
         $("#crystal-1").val(crystalValue1);
-        console.log(crystalValue1);
         
         //Generate and push out a fresh value for crystal #2
         crystalValue2 = getRandomNumber(1,12);
         $("#crystal-2").val(crystalValue2);
-        console.log(crystalValue2);
         
         //Generate and push out a fresh value for crystal #3
         crystalValue3 = getRandomNumber(1,12);
         $("#crystal-3").val(crystalValue3);
-        console.log(crystalValue3);
 
         //Generate and push out a fresh value for crystal #4
         crystalValue4 = getRandomNumber(1,12);
         $("#crystal-4").val(crystalValue4);
-        console.log(crystalValue4);
     }
     
     //Call the reset function on page load
@@ -68,7 +64,7 @@ $(document).ready(function(){
         }
     }
 
-    //Create an on click event listener for all the crystals
+    //Create event listener that will run crystalClick function when each crystal is clicked.
     $(".crystal-icon").click(crystalClick);
     
 })
